@@ -1,0 +1,32 @@
+Set app with : https://angular.io/guide/quickstart 
+-npm i -g @angular/cli
+Ng new my-app
+
+In styles.css,import theme : @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+Import in app.module : BrowserAnimationsModule
+Import angular material and cdk (npm i @angular/material --save, npm i @angular/cdk --save)
+
+Import hammerjs - npm i hammerjs --save,
+ and in main.ts : import “hammerjs”;
+
+In index.html :
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+More info: https://google.github.io/material-design-icons/
+ 
+Implement button and checkbox : https://material.angular.io/components/checkbox/overview
+
+In material modue :
+imports: [
+   MatButtonModule,
+   MatCheckboxModule,
+   MatIconModule
+ ],
+
+A onda to i u exports
+Ikonu koristis kao:
+<button mat-button>
+ <mat-icon>face</mat-icon>
+ Click me!</button>
+
