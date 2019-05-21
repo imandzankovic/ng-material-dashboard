@@ -8,7 +8,7 @@ Import in app.module : BrowserAnimationsModule
 Import angular material and cdk (npm i @angular/material --save, npm i @angular/cdk --save)
 
 Import hammerjs - npm i hammerjs --save,
- and in main.ts : import ìhammerjsî;
+ and in main.ts : import ‚Äúhammerjs‚Äù;
 
 In index.html :
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -24,8 +24,9 @@ imports: [
    MatIconModule
  ],
 
-A onda to i u exports
-Ikonu koristis kao:
+In exports list too.
+
+Usage of icon:
 <button mat-button>
  <mat-icon>face</mat-icon>
  Click me!</button>
