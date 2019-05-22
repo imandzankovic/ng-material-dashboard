@@ -1,0 +1,52 @@
+1. CREATE DEMO MODULE 
+ng g m --dry-run (for test) // without dry-run when ok
+
+ng g c --routing //to add routing into component 
+
+3. create buttons component:
+ 
+ ng g c demo/buttons --no-spec --inline-style --inline-template
+ (--no-spec //without tests)
+ (--inline style, --inline-template //without html, just put template into the component.ts file)
+ 
+2.into app.component.html put <router-outlet></router-outlet>
+
+3.into app.routing.module into routes:[] put 
+{ path: 'demo', loadChildren: './demo/demo.module#DemoModule' },
+  { path: '**', redirectTo: 'demo' }
+  
+  #DemoModule -- lazy loading
+  
+4. into demo-routing.module define routes (forChildren)
+ { path: 'buttons', component: ButtonsComponent },
+    { path: '**', redirectTo: 'buttons' }
+	
+5. import Router module in app.module
+
+6.import Material,Forms module from app to demo module
+
+7.ng g c flexbox 
+import in demo-routing path -flexbox,FlexboxComponent
+
+8.npm i @angular/flex-layout --save //errors
+fix: npm install @angular/flex-layout@7.0.0-beta.24
+
+9. for wrapping items - into flex-container add flex-flow: row wrap
+
+10. create contactmanager module, and sdenav,toolbar.. components
+
+11.in contactmanager module, add routes:[]
+import Routes, RouterModule
+in imports list : RoterModule.forChild(routes)
+
+12. in order to use router-outlet, into contactmanager.html
+define routes list as :
+  { path: '', component:ContactmanagerAppComponent },
+  { path: '**', redirectTo: '' }
+  
+13. add children
+
+14. to have sidenav all over
+flex:1; position:fixed
+into styles.css : body{margin:0}
+
